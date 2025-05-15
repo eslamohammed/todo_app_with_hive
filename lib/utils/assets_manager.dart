@@ -8,5 +8,6 @@ class AssetsManager {
   static const String onBoarding2 = "${path}onboarding1.png";
   static const String onBoarding3 = "${path}onboarding2.png";
   static const String onBoarding4 = "${path}onboarding3.png";
+  static const String proiflePhoto = "${path}todo.png";
   static const String login = "${path}login.png";
 }

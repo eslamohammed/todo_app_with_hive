@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 class ColorManager {
-  static Color primary = const Color(0xFF115A60); // Muted orange 0xFF115A60
-  static Color secondary =const Color(0xFF0F655A); // Orange Dark 
+  // static Color primary = const Color(0xFF115A60); // Muted orange 0xFF115A60
+  static Color primary = const Color.fromARGB(255, 41, 94, 179);
+  // static Color secondary =const Color(0xFF0F655A); // Orange Dark 
+  static Color secondary = const Color(0xff0f2851);
   static Color darkgreen = const Color(0xFF14635B);
   static Color grey = const Color(0xff737477);
 
@@ -34,4 +36,10 @@ class ColorManager {
   static const Color violetLight = Color(0xffd0d1ff);
   static const Color error = Color(0xffef8b8b);
   static const Color coldGrey = Color(0xff415371);
+
+  static const Color primaryColor = Color(0xff4568dc);
+  static const List<Color> primaryGradientColor = [
+    Color(0xff4568dc),
+    Color(0xffb06ab3),
+  ];
 }

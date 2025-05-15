@@ -67,7 +67,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                 child: TextButton(
                   onPressed: () {
                     Navigator.of(context)
-                        .pushReplacementNamed(Routes.loginRoute);
+                        .pushReplacementNamed(Routes.homeScreen);
                   },
                   child:  Text(
                     AppStrings.skip,
@@ -137,7 +137,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
                 onPressed: () {
                   data.currentIndex == data.pageCount -1 ? 
                   Navigator.of(context)
-                        .pushReplacementNamed(Routes.loginRoute)
+                        .pushReplacementNamed(Routes.homeScreen)
                   :
                   pageController.nextPage(
                     duration: const Duration(

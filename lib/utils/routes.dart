@@ -1,12 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:todo_app/screens/home/HomeView.dart';
 import 'package:todo_app/screens/onboarding/OnBoardingView.dart';
 import 'package:todo_app/screens/splash/splash_view.dart';
-// import 'package:pretium_finance/screens/login/login_view.dart';
-// import 'package:pretium_finance/screens/onboarding/OnBoardingView.dart';
-// import 'package:pretium_finance/screens/register/register_view.dart';
-// import 'package:pretium_finance/screens/splash/splash_view.dart';
-// import '../screens/home/home_screen.dart';
 import 'color_manager.dart';
 
 class Routes {
@@ -14,8 +10,8 @@ class Routes {
   static const String homeScreen = "/main";
   static const String detailsRoute = "/details";
   static const String onBoardingRoute = "/onBoarding";
-  static const String registerRoute = "/register";
-  static const String loginRoute = "/login";
+  // static const String registerRoute = "/register";
+  // static const String loginRoute = "/login";
 
 
 }
@@ -31,8 +27,8 @@ class RouteGenerator {
       //   return MaterialPageRoute(builder: (_) => const LoginPage());
       // case Routes.registerRoute:
       //   return MaterialPageRoute(builder: (_) => const SignUpPage());
-      // case Routes.homeScreen:
-      //   return MaterialPageRoute(builder: (_) => const HomeScreen());
+      case Routes.homeScreen:
+        return MaterialPageRoute(builder: (_) => const HomeView());
       default:
         return unDefinedRoute();
     }
