@@ -137,7 +137,6 @@ class _TaskViewState extends State<TaskView> {
 
   @override
   Widget build(BuildContext context) {
-    var textTheme = Theme.of(context).textTheme;
     return GestureDetector(
       onTap: () => FocusManager.instance.primaryFocus?.unfocus(),
       child: Scaffold(
@@ -153,11 +152,11 @@ class _TaskViewState extends State<TaskView> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   /// new / update Task Text
-                  _buildTopText(textTheme),
+                  _buildTopText(),
 
                   /// Middle Two TextFileds, Time And Date Selection Box
                   _buildMiddleTextFieldsANDTimeAndDateSelection(
-                      context, textTheme),
+                      context),
 
                   /// All Bottom Buttons
                   _buildBottomButtons(context),
@@ -247,8 +246,7 @@ class _TaskViewState extends State<TaskView> {
   }
 
   /// Middle Two TextFileds And Time And Date Selection Box
-  SizedBox _buildMiddleTextFieldsANDTimeAndDateSelection(
-      BuildContext context, TextTheme textTheme) {
+  SizedBox _buildMiddleTextFieldsANDTimeAndDateSelection(BuildContext context) {
     return SizedBox(
       width: double.infinity,
       height: 535,
@@ -259,7 +257,7 @@ class _TaskViewState extends State<TaskView> {
           Padding(
             padding: const EdgeInsets.only(left: 30),
             child: Text(AppStrings.titleOfTitleTextField,
-                style: headline4),
+                style: headline1),
           ),
 
           /// Title TextField
@@ -270,8 +268,8 @@ class _TaskViewState extends State<TaskView> {
               title: TextFormField(
                 controller: widget.taskControllerForTitle,
                 maxLines: 6,
-                cursorHeight: 60,
-                style: const TextStyle(color: Colors.black),
+                cursorHeight: 40,
+                style: bodyText1,
                 decoration: InputDecoration(
                   enabledBorder: UnderlineInputBorder(
                     borderSide: BorderSide(color: Colors.grey.shade300),
@@ -351,7 +349,7 @@ class _TaskViewState extends State<TaskView> {
                   Padding(
                     padding: const EdgeInsets.only(left: 10),
                     child:
-                        Text(AppStrings.timeString, style: headline4),
+                        Text(AppStrings.timeString, style: headline3),
                   ),
                   Expanded(child: Container()),
                   Container(
@@ -364,7 +362,7 @@ class _TaskViewState extends State<TaskView> {
                     child: Center(
                       child: Text(
                         showTime(time),
-                        style: bodyText3,
+                        style: bodyText2,
                       ),
                     ),
                   )
@@ -405,7 +403,7 @@ class _TaskViewState extends State<TaskView> {
                   Padding(
                     padding: const EdgeInsets.only(left: 10),
                     child:
-                        Text(AppStrings.dateString, style: headline4),
+                        Text(AppStrings.dateString, style: headline3),
                   ),
                   Expanded(child: Container()),
                   Container(
@@ -418,7 +416,7 @@ class _TaskViewState extends State<TaskView> {
                     child: Center(
                       child: Text(
                         showDate(date),
-                        style: bodyText3,
+                        style: bodyText2,
                       ),
                     ),
                   )
@@ -432,7 +430,7 @@ class _TaskViewState extends State<TaskView> {
   }
 
   /// new / update Task Text
-  SizedBox _buildTopText(TextTheme textTheme) {
+  SizedBox _buildTopText() {
     return SizedBox(
       width: double.infinity,
       height: 100,
@@ -483,12 +481,12 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      height: 150,
+      height: 100,
       child: Padding(
         padding: const EdgeInsets.only(top: 20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 20),
@@ -498,7 +496,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
                 },
                 child: const Icon(
                   Icons.arrow_back_ios_new_rounded,
-                  size: 50,
+                  size: 40,
                 ),
               ),
             ),
@@ -509,5 +507,5 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => const Size.fromHeight(150);
+  Size get preferredSize => const Size.fromHeight(100);
 }

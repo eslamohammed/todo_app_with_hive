@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-// import 'package:hive_flutter/adapters.dart';
 import 'package:todo_app/models/task.dart';
 import 'package:todo_app/screens/bases/BaseWidget.dart';
 import 'package:todo_app/utils/routes.dart';
