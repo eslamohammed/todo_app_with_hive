@@ -1,16 +1,30 @@
-# todo_app
+# 📝 Todo App with Hive
 
-A new Flutter project.
+A simple and efficient Todo mobile application built using **Flutter** and **Hive** for local data storage. This app allows users to manage daily tasks with a clean and intuitive user interface.
 
-## Getting Started
+## 🚀 Features
 
-This project is a starting point for a Flutter application.
+- Add, update, and delete tasks
+- Mark tasks as completed or pending
+- Lightweight and fast performance with local storage using Hive
+- Simple, clean, and user-friendly UI
+- Persistent data storage even after app restarts
+- Dark mode support (if implemented)
 
-A few resources to get you started if this is your first Flutter project:
+## 🛠️ Tech Stack
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- **Flutter** – Cross-platform UI toolkit
+- **Dart** – Programming language
+- **Hive** – Lightweight & blazing fast key-value database
+- **Provider / Bloc / Cubit** – (if used, please mention)
+- **MVVM Architecture** – Clean separation of concerns
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## 📦 Dependencies
+
+```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  hive: ^2.0.0
+  hive_flutter: ^1.0.0
+  path_provider: ^2.0.0
